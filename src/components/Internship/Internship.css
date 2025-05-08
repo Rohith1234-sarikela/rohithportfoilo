@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap');
+
+.internship-section {
+  background: linear-gradient(135deg, #fff7f7 0%, #e6f0ff 100%);
+  border-radius: 20px;
+  padding: 40px 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  max-width: 850px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: zoomIn 0.8s ease-in-out;
+}
+
+.internship-section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Title styling */
+.internship-title {
+  font-size: 2.6rem;
+  color: #1a202c;
+  text-align: center;
+  margin-bottom: 35px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  position: relative;
+  animation: slideInUp 0.7s ease-out;
+}
+
+/* Decorative line below the title */
+.internship-title::after {
+  content: "";
+  width: 130px;
+  height: 5px;
+  background: linear-gradient(90deg, #3b82f6, #f43f5e);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* Internship list styling */
+.internship-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for individual internship items */
+.internship-item {
+  background: #ffffff;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+  border-left: 5px solid #3b82f6;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #2d3748;
+  line-height: 1.6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  animation: slideInRight 0.5s ease-out forwards;
+  opacity: 0;
+  max-width: 700px;
+  width: 100%;
+}
+
+.internship-item:nth-child(1) { animation-delay: 0.2s; }
+
+.internship-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  border-left: 5px solid #f43f5e;
+}
+
+/* Role and company name styling */
+.internship-item h3 {
+  color: #3b82f6;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Paragraph and list styling */
+.internship-item p {
+  margin: 5px 0;
+}
+
+.internship-item ul {
+  list-style-type: disc;
+  margin: 10px 0 10px 20px;
+  font-size: 0.95rem;
+}
+
+/* Strong tag styling for labels */
+.internship-item p strong {
+  color: #1a202c;
+  font-weight: 500;
+}
+
+/* Add icon before each item */
+.internship-item::before {
+  content: "💼";
+  font-size: 1.4rem;
+  margin-right: 10px;
+  color: #f43f5e;
+  vertical-align: middle;
+}
+
+/* Animations */
+@keyframes zoomIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .internship-section {
+    padding: 25px 15px;
+    margin: 20px auto;
+  }
+
+  .internship-title {
+    font-size: 2.2rem;
+  }
+
+  .internship-title::after {
+    width: 100px;
+  }
+
+  .internship-item {
+    font-size: 0.95rem;
+    padding: 15px;
+  }
+
+  .internship-item h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .internship-section {
+    padding: 20px 10px;
+  }
+
+  .internship-title {
+    font-size: 1.9rem;
+  }
+
+  .internship-item {
+    font-size: 0.9rem;
+    padding: 12px;
+    margin: 10px 0;
+  }
+
+  .internship-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .internship-item::before {
+    font-size: 1.2rem;
+  }
+}

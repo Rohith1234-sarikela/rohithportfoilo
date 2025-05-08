@@ -1,0 +1,60 @@
+/* Achievements Section */
+.achievements-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-color: var(--clr-bg) !important
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  color: #333; /* Dark text for readability */
+  margin-bottom: 2rem;
+  text-align: center; /* Center align for title */
+  font-weight: bold;
+}
+
+/* Achievements Container */
+.achievements-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 2rem; /* Space between cards */
+  max-width: 1200px; /* Limit width for larger screens */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Individual Achievement Card */
+.achievement-card {
+  background-color: #fff; /* White background for cards */
+  padding: 1.5rem;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effects */
+}
+
+/* Hover Effect for Achievement Card */
+.achievement-card:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Achievement Title */
+.achievement-title {
+  font-size: 1.5rem;
+  color: #2c3e50; /* Darker blue for title */
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* Achievement Description */
+.achievement-description {
+  font-size: 1rem;
+  color: #007bff; /* Bootstrap primary color for consistency */
+}
+
+/* Image Size */
+.image-size {
+  height: 30vh; /* Fixed height */
+  width: 30vh; /* Fixed width */
+}

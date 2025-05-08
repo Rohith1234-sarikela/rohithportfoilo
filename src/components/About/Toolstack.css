@@ -1,0 +1,29 @@
+.other-skills {
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+  }
+  
+  .other-skills h2 {
+    font-size: 1.25rem; /* Reduced from 1.5rem */
+    color: #444;
+  }
+  
+  .other-skills ul {
+    list-style-type: circle;
+    margin-left: 1rem;
+  }
+  
+  .other-skills li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .tech-icons {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .paragraph {
+    font-size: 0.5rem; /* Reduced from 1rem */
+    color: #333;
+  }
+  

@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap');
+
+.education-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  border-radius: 20px;
+  padding: 50px 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 900px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.education-section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Title styling */
+.education-title {
+  font-size: 2.8rem;
+  color: #1a202c;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  position: relative;
+  animation: slideInDown 0.8s ease-out;
+}
+
+/* Decorative line below the title */
+.education-title::after {
+  content: "";
+  width: 150px;
+  height: 6px;
+  background: linear-gradient(90deg, #5b21b6, #06b6d4);
+  display: block;
+  margin: 15px auto 0;
+  border-radius: 3px;
+}
+
+/* Education list styling */
+.education-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for individual education items */
+.education-item {
+  background: #ffffff;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 15px;
+  border-left: 6px solid #5b21b6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #2d3748;
+  line-height: 1.7;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  animation: slideInLeft 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.education-item:nth-child(1) { animation-delay: 0.2s; }
+.education-item:nth-child(2) { animation-delay: 0.4s; }
+.education-item:nth-child(3) { animation-delay: 0.6s; }
+
+.education-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #06b6d4;
+}
+
+/* Institution name styling */
+.education-item h3 {
+  color: #5b21b6;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Paragraph styling */
+.education-item p {
+  margin: 5px 0;
+}
+
+/* Strong tag styling for labels */
+.education-item p strong {
+  color: #1a202c;
+  font-weight: 600;
+}
+
+/* Add icon before each item */
+.education-item::before {
+  content: "🎓";
+  font-size: 1.5rem;
+  margin-right: 12px;
+  color: #06b6d4;
+  vertical-align: middle;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .education-section {
+    padding: 30px 20px;
+    margin: 20px auto;
+  }
+
+  .education-title {
+    font-size: 2.3rem;
+  }
+
+  .education-title::after {
+    width: 100px;
+  }
+
+  .education-item {
+    font-size: 1rem;
+    padding: 20px;
+  }
+
+  .education-item h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .education-section {
+    padding: 20px 15px;
+  }
+
+  .education-title {
+    font-size: 2rem;
+  }
+
+  .education-item {
+    font-size: 0.95rem;
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .education-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .education-item::before {
+    font-size: 1.2rem;
+  }
+}
